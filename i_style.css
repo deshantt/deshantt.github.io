@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    top: 0;
+    background-color: white;
+    position: fixed;
+}
+
+body{
+    top: 70px;
+    display: block;
+    position: relative;
+}
+
+/* --------------------------------------------------------- */
+/* ---------------------------HEADER------------------------ */
+img{
+    margin: 0;
+    padding: 0;
+    /* width: auto; */
+    /* height: auto; */
+}
+
+nav{
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    padding: 15px;
+    padding-right: 35px;
+}
+
+/* --------------------------------------------------------- */
+/* ---------------------------MAIN CONTENT------------------------ */
+.container1{
+    width: 100%;
+    height: 300px;
+    padding: 0, 20px;
+    text-align: center;
+    background-position: center;
+    display: block;
+    background-image: url("img/background_s.png");
+
+}
+
+.container2{
+    padding: 5%;
+    text-align: center;
+    display: block;
+    position: static;
+    margin-top: 150px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.main{
+    width: 100%;
+    /* text-align: center; */
+    margin-bottom: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#searchbar{
+    border-radius: 25px;
+    border: none;
+    width: 610px;
+    max-height: 100px;
+    min-height: 50px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+#ask1, #ask2, #ask3, #ask4, #ask5, #ask6, #ask7{
+    /* text-align: center; */
+    padding: 50px; 
+    line-height: 1.5;
+    width: 400px;
+    height: 30px;
+    display: inline-block;
+    margin: 30px;
+    background: transparent;
+    border-radius: 4px; 
+    border: 1px solid #0072EF;
+}
+
+
+
+/* ---------------------------FOOTER------------------------ */
+footer{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    width: auto;
+    line-height: 1.5;
+    color: black;
+    padding: 30px;
+    margin-top: 100px;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* ---------------------------ADDITIONAL------------------------ */
+.supported {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    width: auto;
+    line-height: 1.5;
+    color: black;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    padding: 15px;
+    text-align: right;
+}
+
+/* ---------------------------OTHER RULE------------------------ */
+ li {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px;
+    width: auto;
+    line-height: 1.5;
+    color: #0072EF;
+    display: inline-block;
+}
