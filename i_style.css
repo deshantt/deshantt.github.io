@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Raleway:wght@200&family=Roboto&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -16,6 +18,11 @@ body{
     position: relative;
 }
 
+
+.myfooter{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
 /* --------------------------------------------------------- */
 /* ---------------------------HEADER------------------------ */
 img{
@@ -37,11 +44,39 @@ nav{
 /* ---------------------------MAIN CONTENT------------------------ */
 .container1{
     width: 100%;
-    height: 300px;
+    height: 350px;
+    padding: 0, 20px;
+    display: block;
+    background-image: url("img/download.png");
+
+}
+
+.container3{
+    width: 100%;
+    height: 500px;
+    padding: 0, 20px;
+    text-align: center;
+    background-position: top;
+    display: block;
+    background-image: url("img/background2.png");
+}
+
+.container4{
+    width: 100%;
+    height: 500px;
     padding: 0, 20px;
     text-align: center;
     background-position: center;
     display: block;
+    background-image: url("img/background5.png");
+}
+
+.container55{
+    width: 100%;
+    height: 500px;
+    display: block;
+    background-position: center;
+    text-align: center;
     background-image: url("img/background_s.png");
 
 }
@@ -71,7 +106,7 @@ nav{
     max-height: 100px;
     min-height: 50px;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 250px;
 }
 
 #ask1, #ask2, #ask3, #ask4, #ask5, #ask6, #ask7{

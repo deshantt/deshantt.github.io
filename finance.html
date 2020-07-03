@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dewi Shanty</title>
+    <title>Finance</title>
     <link href="finance.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -14,7 +14,7 @@
     <div class='nav'>
         <nav>
             <ul>
-                <a href="index.html"><li>Next Page</li></a>
+                <a href="index.html"><li>Back</li></a>
             </ul>
         </nav>
     </div>
@@ -23,17 +23,20 @@
         <h1 id="title">Hitung Pengeluaranmu...</h1>
 
         <div class="name">
-            <form action="https://flipid.zendesk.com/hc/id">
+            <!-- <form action="https://flipid.zendesk.com/hc/id"> -->
                 <input type="text" id="myname" name="myname" value="Isi namamu disini:">
-            </form>
+            <!-- </form> -->
         </div>
 
 
         <div class="notes">
-            <form class="myform" action="https://flipid.zendesk.com/hc/id">
+            <form class="myform" id="myform" action="https://flipid.zendesk.com/hc/id">
 
-                <label for="saldoawal">Saldo Awal : Rp. </label>
-                <input type="number" id="saldoawal" name="saldoawal"><br>
+                <label for="saldoawal">Saldo Awal : Rp. </label> 
+                <input type="number" id="saldoawal" name="saldoawal"> 
+                <p id="saldoawal1"></p>               
+                <input type="button" id="btn1" value="Submit" />
+                <br>
                 <br>
                             
                 <label for="mycategory">Kategori :</label>
@@ -61,7 +64,26 @@
                 <br>
 
                 <label for="calculate"></label>
-                <input type="submit" name="calculate" value="Tambahkan Transaksi">
+                <input type="button" id="tambahkan" value="Tambah Transaksi" />
+
+                <!-- <input type="button" id="coba" value="Coba" onclick="displayInput()"/> -->
+                <input type="button" id="coba" value="Coba" />
+
+
+                <table id="mytable">
+                    <tr>
+                        <td>
+                            <p id="demo"></p>
+                        </td>
+                        <td>
+                            <p id="demo2"></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <button type="button" id="submitbutton" onclick="hitungSaldo()">Calculate</button>
+
+
             </form>
 
         </div>
@@ -132,5 +154,7 @@
     <!-- <div class="supported">
         <a href="https://flipid.zendesk.com/hc/id"><h4>Didayai oleh Zendesk</h4></a>
     </div> -->
+    <script src="finance.js"></script>
+
 </body>
 </html>

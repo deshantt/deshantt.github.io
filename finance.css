@@ -59,6 +59,10 @@ body{
 }
 
 
+.mytable{
+    width: 100%;
+    border: teal;
+}
 /* --------------------------------------------------------- */
 /* ---------------------------CONTENT------------------------ */
 #saldoawal, #mycategory, #mydate, #mytitle, #amount{
