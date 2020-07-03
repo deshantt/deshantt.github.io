@@ -1,4 +1,4 @@
-function hitungSaldo (saldoawal = 0, pengeluaran = 0){
+function hitungSaldo (saldoawal, pengeluaran = 0){
     let sisasaldo = saldoawal
 
     for (let i = 0; i < pengeluaran.length; i++) {
@@ -6,7 +6,7 @@ function hitungSaldo (saldoawal = 0, pengeluaran = 0){
     }
 
     if (sisasaldo === saldoawal){
-        return document.getElementById("myform").innerHTML = 'Aman. Saldomu masih utuh'
+        return 'Aman. Saldomu masih utuh'
     } else if (sisasaldo < 0) {
         return `OMG!!! Pengeluaranmu telah melebihi Saldo yang kamu miliki. Hutangmu bertambah Rp ${Math.abs(sisasaldo)}`
     } else {
@@ -33,20 +33,59 @@ function hitungSaldo (saldoawal = 0, pengeluaran = 0){
     // document.getElementById("demo").innerHTML = output;
 // }
 
+
+let saldoawal = 0
+let jajan = []
+let nama = ''
+let nomor = 0
+
 function displayName(){
-    document.getElementById('myname').innerHTML = document.getElementById('myname').innerHTML
+    nama = document.getElementById('myname').innerHTML
+    document.getElementById('myname').innerHTML = nama
+
 }
 
 document.getElementById('tambahkan').onclick = function() {
-    let hasilHitung = Number(document.getElementById('amount').value) + Number(document.getElementById('amount').value);
 
-    document.getElementById('demo').innerHTML = document.getElementById('mytitle').value;
-    document.getElementById('demo2').innerHTML = document.getElementById('amount').value;
+    if (!(document.getElementById('mytitle').value)){
+        window.alert('Judul transaksi tidak boleh kosong')
+    } else if (!(document.getElementById('amount').value)){
+        window.alert('Jumlah transaksi tidak boleh kosong')
+    } else {
+        let input = [document.getElementById('mytitle').value, document.getElementById('amount').value, document.getElementById('saldoawal1').value]
+
+        nomor ++
+        let myElement = document.createElement('p')
+        let myText = document.createTextNode(`${nomor}. ${input[0]} Rp ${input[1]}`)
+        let myBox = document.getElementById('datadisplay')
+    
+        document.getElementById('mytitle').value = ''
+        document.getElementById('amount').value = ''
+    
+        myElement.appendChild(myText)
+        myBox.appendChild(myElement)
+    
+        jajan.push(input[1])
+        document.getElementById('saldoakhir').innerHTML = hitungSaldo(saldoawal, jajan)
+    
+    }
 }
 
 document.getElementById('btn1').onclick = function() {
     let hasilHitung = document.getElementById('saldoawal').value
-    document.getElementById('saldoawal1').innerHTML = hasilHitung;
+    document.getElementById('saldoawal1').innerHTML = `Saldo Awalmu adalah Rp ${hasilHitung}`;
+    saldoawal = hasilHitung
+}
+
+document.getElementById('coba').onclick = function() {
+    let hasilHitung = document.getElementById('saldoawal').value
+    // document.getElementById('saldoawal1').innerHTML = `Saldo Awal adalah Rp ${hasilHitung}`;
+    
+    let newone = document.createElement('p')
+    let text =document.createTextNode(`Saldo Awal adalah Rp ${hasilHitung}`)
+    let box = document.getElementById('hmm')
+    newone.appendChild(text)
+    box.appendChild(newone)
 }
 
 function displayInput() {
@@ -58,4 +97,4 @@ function displayInput() {
     y.setAttribute("type", "text");
     y.setAttribute("value", "Donald");
     document.getElementById("myFormss").appendChild(y);
-  }
+}
