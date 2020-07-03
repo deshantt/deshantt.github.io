@@ -33,7 +33,7 @@ body{
     height: 600px;
 }
 
-#title {
+#title, #namauser {
     color:teal;
     font-family: 'Dancing Script', cursive;
     font-size: 70px;
@@ -41,6 +41,19 @@ body{
     text-align: center;
 }
 
+#btnname, #btn1, #tambahkan {
+    font-family: 'Dancing Script', cursive;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 4px; 
+    width: 100px;
+    text-align: center;
+}
+
+#tambahkan{
+    width: 200px;
+}
 
 #myname{
     display: flex;
@@ -63,7 +76,7 @@ body{
     width: 100%;
     border: teal;
 }
-/* --------------------------------------------------------- */
+
 /* ---------------------------CONTENT------------------------ */
 #saldoawal, #mycategory, #mydate, #mytitle, #amount{
     font-family: 'Dancing Script', cursive;
@@ -147,13 +160,12 @@ footer{
 
 /* ---------------------------OTHER RULE------------------------ */
  li {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: teal;
     padding: 10px;
     width: auto;
     line-height: 1.5;
-    color: #0072EF;
     display: inline-block;
 }
 

@@ -20,20 +20,6 @@ function hitungSaldo (saldoawal, pengeluaran = 0){
     }
 }
 
-// function createData (){
-    // var x = document.createElement("FORM");
-    // x.setAttribute("id", "myForm");
-    // document.body.appendChild(x);
-  
-    // var y = document.createElement("INPUT");
-    // y.setAttribute("type", "text");
-    // y.setAttribute("value", "Donald");
-    // document.getElementById("myForm").appendChild(y);
-    // let output = document.getElementById("tambahkan").innerHTML;
-    // document.getElementById("demo").innerHTML = output;
-// }
-
-
 let saldoawal = 0
 let jajan = []
 let nama = ''
@@ -47,7 +33,11 @@ function displayName(){
 
 document.getElementById('tambahkan').onclick = function() {
 
-    if (!(document.getElementById('mytitle').value)){
+    if(!nama){
+        window.alert('Isi dulu namamu')
+    } else if (saldoawal === 0){
+        window.alert('saldo awal tidak boleh kosong')   
+    } else if (!(document.getElementById('mytitle').value)){
         window.alert('Judul transaksi tidak boleh kosong')
     } else if (!(document.getElementById('amount').value)){
         window.alert('Jumlah transaksi tidak boleh kosong')
@@ -71,15 +61,27 @@ document.getElementById('tambahkan').onclick = function() {
     }
 }
 
+document.getElementById('btnname').onclick = function(){
+    document.getElementById('namauser').innerHTML = document.getElementById('myname').value
+    nama = document.getElementById('myname').value
+
+    document.getElementById("myname").style.visibility = "hidden";
+    document.getElementById("btnname").style.visibility = "hidden";
+}
+
 document.getElementById('btn1').onclick = function() {
-    let hasilHitung = document.getElementById('saldoawal').value
-    document.getElementById('saldoawal1').innerHTML = `Saldo Awalmu adalah Rp ${hasilHitung}`;
-    saldoawal = hasilHitung
+    if (!(document.getElementById('saldoawal').value)){
+        window.alert('saldo awal tidak boleh kosong')   
+    } else{
+        let hasilHitung = document.getElementById('saldoawal').value
+        document.getElementById('saldoawal1').innerHTML = `Saldo Awalmu adalah Rp ${hasilHitung}`;
+        saldoawal = hasilHitung    
+        document.getElementById('saldoawal').disabled = true;
+    }
 }
 
 document.getElementById('coba').onclick = function() {
     let hasilHitung = document.getElementById('saldoawal').value
-    // document.getElementById('saldoawal1').innerHTML = `Saldo Awal adalah Rp ${hasilHitung}`;
     
     let newone = document.createElement('p')
     let text =document.createTextNode(`Saldo Awal adalah Rp ${hasilHitung}`)
