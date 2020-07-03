@@ -18,20 +18,7 @@ body{
     position: relative;
 }
 
-
-.myfooter{
-    font-family: 'Dancing Script', cursive;
-    text-align: center;
-}
-/* --------------------------------------------------------- */
 /* ---------------------------HEADER------------------------ */
-img{
-    margin: 0;
-    padding: 0;
-    /* width: auto; */
-    /* height: auto; */
-}
-
 nav{
     display: inline-block;
     position: fixed;
@@ -40,18 +27,26 @@ nav{
     padding-right: 35px;
 }
 
-/* --------------------------------------------------------- */
 /* ---------------------------MAIN CONTENT------------------------ */
+.container2, .container3, .container4, .container6, .container7, .container9{
+    padding: 5%;
+    text-align: center;
+    display: block;
+    position: static;
+    margin-top: 150px;
+    font-family: 'Dancing Script', cursive;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
 .container1{
     width: 100%;
     height: 350px;
     padding: 0, 20px;
     display: block;
     background-image: url("img/download.png");
-
 }
 
-.container3{
+.container5{
     width: 100%;
     height: 500px;
     padding: 0, 20px;
@@ -61,7 +56,7 @@ nav{
     background-image: url("img/background2.png");
 }
 
-.container4{
+.container8{
     width: 100%;
     height: 500px;
     padding: 0, 20px;
@@ -69,31 +64,21 @@ nav{
     background-position: center;
     display: block;
     background-image: url("img/background5.png");
+    align-content: center;
 }
 
-.container55{
+.container10{
     width: 100%;
     height: 500px;
     display: block;
     background-position: center;
     text-align: center;
     background-image: url("img/background_s.png");
-
 }
 
-.container2{
-    padding: 5%;
-    text-align: center;
-    display: block;
-    position: static;
-    margin-top: 150px;
-
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
-}
 
 .main{
     width: 100%;
-    /* text-align: center; */
     margin-bottom: 60px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -107,10 +92,11 @@ nav{
     min-height: 50px;
     text-align: center;
     margin-top: 250px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
 }
 
 #ask1, #ask2, #ask3, #ask4, #ask5, #ask6, #ask7{
-    /* text-align: center; */
     padding: 50px; 
     line-height: 1.5;
     width: 400px;
@@ -119,15 +105,11 @@ nav{
     margin: 30px;
     background: transparent;
     border-radius: 4px; 
-    border: 1px solid #0072EF;
+    border: 1px solid teal;
 }
-
-
 
 /* ---------------------------FOOTER------------------------ */
 footer{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 15px;
     font-weight: 400;
     width: auto;
     line-height: 1.5;
@@ -135,31 +117,17 @@ footer{
     padding: 30px;
     margin-top: 100px;
     border-top: 1px solid rgba(0, 0, 0, .1);
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
 }
 
 /* ---------------------------ADDITIONAL------------------------ */
-.supported {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    width: auto;
-    line-height: 1.5;
-    color: black;
-    width: 100%;
-    position: absolute;
-    right: 0;
-    padding: 15px;
-    text-align: right;
-}
-
-/* ---------------------------OTHER RULE------------------------ */
  li {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: teal;
     padding: 10px;
     width: auto;
     line-height: 1.5;
-    color: #0072EF;
     display: inline-block;
 }
