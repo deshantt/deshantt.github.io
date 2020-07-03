@@ -32,7 +32,6 @@ function displayName(){
 }
 
 document.getElementById('tambahkan').onclick = function() {
-
     if(!nama){
         window.alert('Isi dulu namamu')
     } else if (saldoawal === 0){
@@ -78,25 +77,4 @@ document.getElementById('btn1').onclick = function() {
         saldoawal = hasilHitung    
         document.getElementById('saldoawal').disabled = true;
     }
-}
-
-document.getElementById('coba').onclick = function() {
-    let hasilHitung = document.getElementById('saldoawal').value
-    
-    let newone = document.createElement('p')
-    let text =document.createTextNode(`Saldo Awal adalah Rp ${hasilHitung}`)
-    let box = document.getElementById('hmm')
-    newone.appendChild(text)
-    box.appendChild(newone)
-}
-
-function displayInput() {
-    var x = document.createElement("FORM");
-    x.setAttribute("id", "myFormss");
-    document.body.appendChild(x);
-  
-    var y = document.createElement("INPUT");
-    y.setAttribute("type", "text");
-    y.setAttribute("value", "Donald");
-    document.getElementById("myFormss").appendChild(y);
 }
